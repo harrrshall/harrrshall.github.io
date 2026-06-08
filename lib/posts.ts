@@ -11,6 +11,7 @@ export interface Post {
   excerpt: string;
   content: string;
   coverImage?: string;
+  dropcap?: boolean;
 }
 
 export function getAllPosts(): Post[] {
@@ -33,6 +34,7 @@ export function getAllPosts(): Post[] {
       excerpt: data.excerpt,
       content,
       coverImage: data.coverImage,
+      dropcap: data.dropcap,
     };
   });
 
@@ -55,6 +57,7 @@ export function getPostBySlug(slug: string): Post | null {
       excerpt: data.excerpt,
       content,
       coverImage: data.coverImage,
+      dropcap: data.dropcap,
     };
   } catch (error) {
     return null;

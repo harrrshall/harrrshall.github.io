@@ -3,6 +3,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
 import type { Post } from "@/lib/posts"
 import BackLink from "../BackLink"
 
@@ -40,8 +41,8 @@ export default function PostView({ post }: { post: Post }) {
 
                 <hr className="rp-rule" />
 
-                <div className="rp-post-body">
-                    <ReactMarkdown>{post.content}</ReactMarkdown>
+                <div className={`rp-post-body${post.dropcap === false ? ' no-dropcap' : ''}`}>
+                    <ReactMarkdown remarkPlugins={[remarkGfm]}>{post.content}</ReactMarkdown>
                 </div>
 
                 <hr className="rp-rule" />

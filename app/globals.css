@@ -512,6 +512,16 @@ body {
   font-family: "Lora", serif;
 }
 
+.rp-post-body.no-dropcap > p:first-child::first-letter {
+  font-size: inherit;
+  font-weight: inherit;
+  float: none;
+  line-height: inherit;
+  padding: 0;
+  color: inherit;
+  font-family: inherit;
+}
+
 .rp-post-body h1,
 .rp-post-body h2,
 .rp-post-body h3 {
@@ -545,6 +555,31 @@ body {
 }
 
 .rp-post-body li { margin: 0.35rem 0; }
+
+.rp-post-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.7rem 0;
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.rp-post-body thead th {
+  border-bottom: 1.5px solid var(--rp-ink);
+  text-align: left;
+  font-weight: 700;
+  color: var(--rp-ink);
+  padding: 0.5rem 0.8rem;
+}
+
+.rp-post-body tbody td {
+  border-bottom: 1px dotted var(--rp-rule);
+  padding: 0.5rem 0.8rem;
+  vertical-align: top;
+  color: var(--rp-body);
+}
+
+.rp-post-body tbody tr:last-child td { border-bottom: none; }
 
 .rp-post-body a {
   color: var(--rp-link);
