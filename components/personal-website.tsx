@@ -111,9 +111,10 @@ export default function PersonalWebsite({ physicsProgress: _physicsProgress }: P
           <h2 className="rp-section-title"><span className="rp-num">3.</span> Fun facts</h2>
           <ul className="rp-bullets">
             <li>
-              22. College dropout, in tech for the last 5 years.
-              Currently running{" "}
-              <a href="https://gladium.ai" target="_blank" rel="noopener noreferrer">gladium.ai</a>.
+              21. College dropout, in tech for the last 5 years.
+              Used to run{" "}
+              <a href="https://gladium.ai" target="_blank" rel="noopener noreferrer">gladium.ai</a>{" "}
+              and scaled it to $10K.
             </li>
             <li>
               Built a product for landlords and tenants that reached
@@ -126,8 +127,8 @@ export default function PersonalWebsite({ physicsProgress: _physicsProgress }: P
               out.
             </li>
             <li>
-              Wrote a CLI that generated AI-written Reddit posts that
-              hit 1,000,000 views.
+              Trained a Hinglish TTS model on synthetic data that beat
+              all the open-source models.
             </li>
             <li>
               Off-screen: I run, and I box (beginner).
@@ -193,6 +194,15 @@ export default function PersonalWebsite({ physicsProgress: _physicsProgress }: P
               Imagined conversations with Ramanujan, Steve Jobs, and Nikola
               Tesla.{" "}
               <a href="https://open.spotify.com/episode/1cQs2EVEVYnZHoweeSCBvU?si=K0iqU3EhQLy76EKD_N3Mug" target="_blank" rel="noopener noreferrer">Listen on Spotify &rarr;</a>
+            </dd>
+
+            <dt>
+              <span className="rp-num">5.5</span> AI research
+              <span className="rp-meta"> &middot; April &ndash; present</span>
+            </dt>
+            <dd>
+              Working on a novel model architecture.{" "}
+              <a href="https://x.com/HarshalsinghCN/status/2066458470149218560?s=20" target="_blank" rel="noopener noreferrer">Read the thread &rarr;</a>
             </dd>
           </dl>
         </section>
