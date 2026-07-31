@@ -106,30 +106,6 @@ export default function PersonalWebsite({ physicsProgress: _physicsProgress }: P
             </li>
           </ul>
 
-          <h3 className="rp-subsection-title">BarunLM-35M: The World&rsquo;s Best Language Model Under 100 Million Parameters</h3>
-          <p>
-            A 35M-parameter base model that scores <strong>41.01%</strong>{" "}
-            on a fixed, decontaminated nine-task zero-shot benchmark, leading every
-            evaluated sub-100M base model under the same protocol. It beats
-            LFM2.5-230M-Base by 1.81 percentage points while using 6.55&times;
-            fewer parameters, and clears GPT-2 125M and Pythia-160M as well.
-          </p>
-          <p>
-            The gain comes from three design choices: a 3:1 local-to-global
-            attention schedule, a learned residual selector applied every four
-            layers, and a capacity-aligned budget of 162.5 tokens per
-            parameter. Pretraining ran on 5.70B tokens on a single H200.
-            Evaluation excludes 1,854 contaminated samples caught by a
-            correctness-blind 13-token exact-match scan over the whole training
-            corpus, and the paired 10,000-resample bootstrap interval for the
-            lead sits at [+0.92, +2.71] percentage points.
-          </p>
-          <p className="rp-meta-line">
-            <a href="https://github.com/harrrshall/barunlm-35m" target="_blank" rel="noopener noreferrer">Code</a>{" "}
-            &middot;{" "}
-            <a href="https://huggingface.co/harrrshall/BarunLM-35M" target="_blank" rel="noopener noreferrer">Weights on Hugging Face</a>
-          </p>
-
           <h3 className="rp-subsection-title">AlphaSpectra: Detecting Plant Disease Before Symptoms Appear</h3>
           <p>
             Developing a foundation model trained on hyperspectral leaf
