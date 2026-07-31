@@ -17,7 +17,7 @@ export default function PersonalWebsite({ physicsProgress: _physicsProgress }: P
         <header className="rp-header">
           <h1 className="rp-title">Harshal Singh</h1>
           <p className="rp-byline">Independent researcher &middot; builder</p>
-          <p className="rp-date">Last updated May 2026</p>
+          <p className="rp-date">Last updated July 2026</p>
           <p className="rp-socials rp-socials-top">
             <a href="https://github.com/harrrshall" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="rp-social">
               <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
@@ -77,32 +77,87 @@ export default function PersonalWebsite({ physicsProgress: _physicsProgress }: P
         <hr className="rp-rule" />
 
         <section className="rp-section">
-          <h2 className="rp-section-title"><span className="rp-num">2.</span> Current research &mdash; TTS &times; neuroscience</h2>
+          <h2 className="rp-section-title"><span className="rp-num">2.</span> Current Work: Sovereign AI for Inference and Model Training</h2>
           <p>
-            A small, expressive Hinglish TTS system, approached from the
-            angle of how speech is actually produced and perceived in the brain.
-            Two threads:
+            Building AI systems that are small enough to own and run on
+            hardware you already have, trained on data you generate rather
+            than data you scrape. Both model training and inference remain
+            entirely under your control.
           </p>
+
+          <p>Most of my day to day work sits in three areas.</p>
           <ul className="rp-bullets">
             <li>
-              <strong>Naturalness.</strong>{" "}
-              <em>
-                What really makes a voice sound natural to the human
-                brain? Is it prosody, breath control, hesitation, micro-timing,
-                emotional variance, spectral texture, or something even deeper
-                inside the auditory system&rsquo;s perception stack? Can we
-                even define naturalness?
-              </em>
+              <strong>Training models.</strong> Taking a model from an empty
+              repository to a trained checkpoint: building the dataset,
+              designing the architecture, running the training, and measuring
+              the result on evals that hold up.
             </li>
             <li>
-              <strong>Optimization, from first principles.</strong>{" "}
-              <em>
-                Instead of endlessly racing to optimize the next matmul,
-                can we step back and ask a deeper question: is there an
-                entirely different way around the problem?
-              </em>
+              <strong>Inference for open source models.</strong> Making open
+              weights run fast and cheap where they are actually needed, in
+              the browser, on device, and on a single GPU. Quantization,
+              distillation, and serving.
+            </li>
+            <li>
+              <strong>Fine tuning.</strong> Adapting an existing model to a
+              specific domain, voice, or task, with paired evaluation that
+              shows exactly what the tuning bought.
             </li>
           </ul>
+
+          <h3 className="rp-subsection-title">BarunLM-35M: The World&rsquo;s Best Language Model Under 100 Million Parameters</h3>
+          <p>
+            A 35M-parameter base model that scores <strong>41.01%</strong>{" "}
+            on a fixed, decontaminated nine-task zero-shot benchmark, leading every
+            evaluated sub-100M base model under the same protocol. It beats
+            LFM2.5-230M-Base by 1.81 percentage points while using 6.55&times;
+            fewer parameters, and clears GPT-2 125M and Pythia-160M as well.
+          </p>
+          <p>
+            The gain comes from three design choices: a 3:1 local-to-global
+            attention schedule, a learned residual selector applied every four
+            layers, and a capacity-aligned budget of 162.5 tokens per
+            parameter. Pretraining ran on 5.70B tokens on a single H200.
+            Evaluation excludes 1,854 contaminated samples caught by a
+            correctness-blind 13-token exact-match scan over the whole training
+            corpus, and the paired 10,000-resample bootstrap interval for the
+            lead sits at [+0.92, +2.71] percentage points.
+          </p>
+          <p className="rp-meta-line">
+            <a href="https://github.com/harrrshall/barunlm-35m" target="_blank" rel="noopener noreferrer">Code</a>{" "}
+            &middot;{" "}
+            <a href="https://huggingface.co/harrrshall/BarunLM-35M" target="_blank" rel="noopener noreferrer">Weights on Hugging Face</a>
+          </p>
+
+          <h3 className="rp-subsection-title">AlphaSpectra: Detecting Plant Disease Before Symptoms Appear</h3>
+          <p>
+            Developing a foundation model trained on hyperspectral leaf
+            imagery to detect plant diseases before visible symptoms emerge.
+            The model identifies spectral changes that occur before any signs
+            can be seen by the human eye.
+          </p>
+          <p>
+            The first public release is <strong>BridgeCheck</strong>, a
+            physics-grounded VNIR-to-SWIR candidate generation system with
+            fail-closed auditing on paired measurements. It ensures that a
+            predicted value is never silently presented as a real measurement,
+            preserving scientific reliability and traceability.
+          </p>
+          <p className="rp-meta-line">
+            <a href="https://harrrshall.github.io/alphaspectra-bridgecheck/" target="_blank" rel="noopener noreferrer">Try BridgeCheck</a>{" "}
+            &middot;{" "}
+            <a href="https://github.com/harrrshall/alphaspectra-bridgecheck" target="_blank" rel="noopener noreferrer">Code</a>
+          </p>
+
+          <p>
+            <strong>
+              DM for any type of model training/inference work.
+            </strong>{" "}
+            <a href="https://x.com/HarshalsinghCN" target="_blank" rel="noopener noreferrer">X</a>{" "}
+            or{" "}
+            <a href="mailto:harshalsingh1223@gmail.com">email</a>.
+          </p>
         </section>
 
         <hr className="rp-rule" />
@@ -286,6 +341,26 @@ export default function PersonalWebsite({ physicsProgress: _physicsProgress }: P
 }
 
 const PROJECTS = [
+  {
+    title: "barunlm-35m",
+    description: "The world's best language model under 100M parameters: 41.01% macro accuracy on a decontaminated nine-task zero-shot suite at 35M parameters, beating LFM2.5-230M-Base with 6.55x fewer parameters.",
+    github: "https://github.com/harrrshall/barunlm-35m",
+  },
+  {
+    title: "syntts",
+    description: "SOTA Hinglish (89M) code-switching TTS running fully in the browser on WebGPU; trained on 100% synthetic data, distilled from 467M with RL.",
+    github: "https://github.com/harrrshall/syntts",
+  },
+  {
+    title: "alphaspectra-bridgecheck",
+    description: "Browser-first, physics-grounded VNIR-to-SWIR candidate generation with fail-closed paired-spectrum auditing for leaf spectroscopy.",
+    github: "https://github.com/harrrshall/alphaspectra-bridgecheck",
+  },
+  {
+    title: "tinyrouter",
+    description: "A ~10K-parameter LLM router that learns which open-source model should answer each question and in what role, trained by evolution (sep-CMA-ES). Beat every single model in the pool; picked up by researchers at OpenAI and Anthropic, and reposted by the CEO of Hugging Face.",
+    github: "https://github.com/harrrshall/tinyrouter",
+  },
   {
     title: "numpygrad",
     description: "GPT-2 trained from scratch in pure NumPy, verified against PyTorch, with an accompanying blog post deriving the math line by line.",
