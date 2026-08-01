@@ -78,33 +78,27 @@ export default function PersonalWebsite({ physicsProgress: _physicsProgress }: P
 
         <section className="rp-section">
           <h2 className="rp-section-title"><span className="rp-num">2.</span> Current Work: Sovereign AI for Inference and Model Training</h2>
-          <p>
-            Building AI systems that are small enough to own and run on
-            hardware you already have, trained on data you generate rather
-            than data you scrape. Both model training and inference remain
-            entirely under your control.
-          </p>
-
-          <p>Most of my day to day work sits in three areas.</p>
+          <p>Most of my time goes into:</p>
           <ul className="rp-bullets">
+            <li>Training small language models and beating them on benchmarks.</li>
             <li>
-              <strong>Training models.</strong> Taking a model from an empty
-              repository to a trained checkpoint: building the dataset,
-              designing the architecture, running the training, and measuring
-              the result on evals that hold up.
+              Taking open source models, often from China, and pushing them to
+              run under extremely constrained compute budgets.
             </li>
             <li>
-              <strong>Inference for open source models.</strong> Making open
-              weights run fast and cheap where they are actually needed, in
-              the browser, on device, and on a single GPU. Quantization,
-              distillation, and serving.
-            </li>
-            <li>
-              <strong>Fine tuning.</strong> Adapting an existing model to a
-              specific domain, voice, or task, with paired evaluation that
-              shows exactly what the tuning bought.
+              Fine-tuning open models to outperform frontier models on
+              specific tasks.
             </li>
           </ul>
+          <p>
+            Companies won't want to depend entirely on frontier labs. Events
+            like the Fable 5 ban situation have shown how risky it can be to
+            build a business on models you don't control. Over time, more
+            companies will prefer owning their own stack: taking a strong open
+            source foundation model, fine-tuning it for a narrow domain, and
+            creating systems that achieve best-in-class performance for their
+            specific use case.
+          </p>
 
           <h3 className="rp-subsection-title">AlphaSpectra: Detecting Plant Disease Before Symptoms Appear</h3>
           <p>
