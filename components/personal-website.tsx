@@ -59,10 +59,6 @@ export default function PersonalWebsite({ physicsProgress: _physicsProgress }: P
             I believe the world is a very malleable place, and that I
             can bend it according to my will.
           </p>
-          <p>
-            I may not be the most intelligent person in the room, but I
-            am the most determined and the highest-agency.
-          </p>
         </section>
 
         <hr className="rp-rule" />
@@ -90,16 +86,6 @@ export default function PersonalWebsite({ physicsProgress: _physicsProgress }: P
               specific tasks.
             </li>
           </ul>
-          <p>
-            Companies won't want to depend entirely on frontier labs. Events
-            like the Fable 5 ban situation have shown how risky it can be to
-            build a business on models you don't control. Over time, more
-            companies will prefer owning their own stack: taking a strong open
-            source foundation model, fine-tuning it for a narrow domain, and
-            creating systems that achieve best-in-class performance for their
-            specific use case.
-          </p>
-
           <h3 className="rp-subsection-title">AlphaSpectra: Detecting Plant Disease Before Symptoms Appear</h3>
           <p>
             Developing a foundation model trained on hyperspectral leaf
