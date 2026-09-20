@@ -1,14 +1,15 @@
 ---
 title: "I tried reverse-engineering Jev"
 date: "2026-09-20"
+dropcap: false
 excerpt: "what probing jev and training nine open replicas revealed about its behaviour, strengths and limitations."
 ---
 
-*openjev project, september 2026*
-
 ## abstract
 
-jev is typesafe's decision model. openjev investigates how it behaves and how closely an open model can reproduce its answers. we studied its responses, timing and billing information, then trained nine replicas. the strongest replicas answered 148 to 153 of 192 unseen rule questions correctly. jev answered 154 correctly. these results establish progress in reproducing behaviour; its internal design remains unknown.
+jev is typesafe's decision model. openjev investigates how it behaves and how closely an open model can reproduce its answers. we studied its responses, timing and billing information, then trained nine replicas.
+
+the strongest replicas answered 148 to 153 of 192 unseen rule questions correctly. jev answered 154 correctly. these results establish progress in reproducing behaviour; its internal design remains unknown.
 
 ## 1. what we investigated
 
